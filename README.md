@@ -20,3 +20,5 @@
 5. 챗봇 API 구축
    
 6. 웹 사이트 구현
+
+![image](https://github.com/user-attachments/assets/b0eb0a66-52c6-423a-b114-a20e7c20db84)
