@@ -1,0 +1,53 @@
+        .chat-container {
+            width: 99%;
+            height: 800px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        .chat-message {
+            width: max-content;
+            margin-bottom: 10px;
+            padding: 5px;
+            border-radius: 30px;
+        }
+        .guide-message{
+            width: max-content;
+            margin-bottom: 10px;
+            padding: 5px;
+            border-radius: 30px;
+            background-color: #e2f4ff;
+            text-align: center;
+        }
+        .my-message {
+            background-color: #e2f4ff;
+            float: right;
+            text-align: center;
+        }
+        .message-text {
+            color: #333;
+        }
+        .myButton {
+	        box-shadow: 3px 3px 3px 0px #9aa8ad;
+	        background:linear-gradient(to bottom, #ededed 5%, #b6b4c2 100%);
+	        background-color:#ededed;
+	        border-radius:8px;
+	        border:1px solid #8e8ec2;
+	        cursor:pointer;
+	        color:#234a54;
+	        font-family:Verdana;
+	        font-size:13px;
+	        font-weight:bold;
+	        font-style:italic;
+	        padding:3px 25px;
+	        text-decoration:none;
+            text-shadow:0px 0px 0px #e1e2ed;
+        }
+        .myButton:hover {
+	        background:linear-gradient(to bottom, #b6b4c2 5%, #ededed 100%);
+	        background-color:#b6b4c2;
+        }
+        .myButton:active {
+	        position:relative;
+	        top:1px;
+        }

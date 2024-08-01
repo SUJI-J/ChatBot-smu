@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>result</title>
+    <script src="https://kit.fontawesome.com/0fb75f6141.js" crossorigin="anonymous"></script>
+    <style>
+        .chat-container {
+            width: 99%;
+            height: 800px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+            background-image: url('/static/images/수뭉이.jpg');
+            background-size : contain ;
+        }
+        .chat-message {
+            width: max-content;
+            margin-bottom: 10px;
+            padding: 5px;
+            border-radius: 30px;
+            margin-right: 5px;
+            margin-top: 10px;
+        }
+        .other-message {
+            width: 30%;
+            padding-left: 15px;
+            background-color: #CFCFCF;
+            margin-top: 10px;
+            margin-left: 10px;
+            margin: 0 auto;
+            margin-bottom: 15px;
+        }
+        .my-message {
+            width: 30%;
+            background-color: #AEE98F;
+            text-align: center;
+            margin: 0 auto;
+            margin-bottom: 15px;
+            margin-top: 100px;
+        }
+        .message-text {
+            color: #333;
+        }
+        .w-btn-outline {
+            padding: 15px 30px;
+            border-radius: 15px;
+            font-family: "paybooc-Light", sans-serif;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.25s;
+            margin:auto;
+            display:block;
+            margin-bottom: 15px;
+        }
+        .w-btn-green-outline {
+            border: 3px solid #77af9c;
+            color: black;
+            margin: 0 auto;
+        }
+        .w-btn-green-outline:hover {
+            background-color: #77af9c;
+            color: #d7fff1;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body class="chat-container">
+<div>
+    <div class="chat-message my-message">
+        <p class="message-text"><b>{{ send_question['query'] }}</b></p>
+    </div>
+    <div class="chat-message other-message">
+        {% if send_answer['imageUrl'] == '60% 이하' %}
+        <p class="message-text">유사도 : {{ send_answer['imageUrl'] }}</p>
+        <p class="message-text"><b>답변 👉 {{ send_answer['Answer'] }}</b></p>
+        {% else %}
+         <p class="message-text"><b>선택된 질문 👉 {{ send_answer['Query'] }}</b></p>
+        <p class="message-text"><b>답변 👉 {{ send_answer['Answer'] }}</b></p>
+        <p class="message-text">의도분류 : {{ send_answer['Intent'] }}</p>
+        <p class="message-text">유사도 : {{ send_answer['imageUrl'] }} %</p>
+        {% endif %}
+    </div>
+</div>
+
+
+<input type="button" value="다시 질문하기" class="w-btn-outline w-btn-green-outline" onClick="history.go(-1)">
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+    <script src="https://kit.fontawesome.com/0fb75f6141.js" crossorigin="anonymous"></script>
+    <style>
+        .chat-container {
+            width: 99%;
+            height: 800px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+            background-image: url('/static/images/수뭉이.jpg');
+            background-size : contain ;
+        }
+        .chat-message {
+            width: max-content;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 30px;
+            margin-right: 5px;
+        }
+        .guide-message{
+            width: max-content;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 30px;
+            background-color: #CFCFCF;
+            margin-left: 5px;
+        }
+        .my-message {
+            background-color: #AEE98F;
+            float: right;
+            text-align: center;
+            width: 700px;
+            height: 280px;
+        }
+        .message-text {
+            color: #333;
+        }
+        .w-btn-outline {
+            position: relative;
+            padding: 15px 30px;
+            border-radius: 15px;
+            font-family: "paybooc-Light", sans-serif;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.25s;
+        }
+        .w-btn-green-outline {
+            border: 3px solid #77af9c;
+            color: black;
+        }
+        .w-btn-green-outline:hover {
+            background-color: #77af9c;
+            color: #d7fff1;
+        }
+        #inputText {
+           width: 650px;
+           height: 100px;
+           font-size: 15px;
+           border: 0;
+           border-radius: 15px;
+           outline: none;
+           padding-left: 10px;
+           background-color: rgb(233, 233, 233);
+           margin-bottom: 10px;
+        }
+        .find-btn{
+            text-align: center;
+        }
+        .find-btn1{
+            display :inline-block;
+            margin-top: 280px;
+        }
+    </style>
+</head>
+<body class="chat-container">
+<form action="http://127.0.0.1:5000/result" method="post">
+    <div class="chat-message my-message">
+        <p><b>🦌 수뭉봇에게 물어봐 ! 🦌</b></p>
+        <p class="message-text"><input type="text" name="query" id="inputText"/></p>
+        <p><input type="submit" value="질문하기" class="w-btn-outline w-btn-green-outline"></p>
+    </div>
+    <div class="guide-message">
+        <p class="message-text"><b>😸 "수뭉봇"은 공과대학의 다양한 정보를 알려드립니다 !! 😸</b></p>
+        <p class="message-text" style="font-size:18px"><b>[ 질문 예시 ]</b></p>
+        <p class="message-text"><b>1️⃣ 학과 사무실 위치 : ' @@@과 학과사무실 위치 알려줘 '</b></p>
+        <p class="message-text"><b>2️⃣ 학과 사무실 번호 : ' @@@과 학과사무실 번호 알려줘 '</b></p>
+        <p class="message-text"><b>3️⃣ 공과대 교수님 연구실 번호 : ' @@@교수님 연구실 번호 알려줘 '</b></p>
+        <p class="message-text"><b>4️⃣ 공과대 교수님 연구실 위치 : ' @@@교수님 연구실 위치 알려줘 '</b></p>
+        <p class="message-text"><b>5️⃣ 그외 : '한누리관1층 시설 알려줘' / '외국인유학생상담센터 위치 알려줘' / '총무회계팀 번호 알려줘' </b></p>
+    </div>
+    <div class="find-btn">
+            <button class="w-btn-outline w-btn-green-outline find-btn1" type="button"
+                    onclick="window.open('https://www.smu.ac.kr/ko/life/academicCalendar.do')"><i
+                    class="fa-sharp fa-regular fa-calendar-days"></i> 학사일정
+            </button>&nbsp;
+            <button class="w-btn-outline w-btn-green-outline find-btn1" type="button"
+                    onclick="window.open('https://www.smu.ac.kr/ko/life/restaurantView4.do?mode=view&articleNo=735976')">
+                <i class="fa-solid fa-utensils"></i> 식당메뉴
+            </button>&nbsp;
+            <button class="w-btn-outline w-btn-green-outline find-btn1" type="button"
+                    onclick="window.open('https://lib.smu.ac.kr/Common?html=/Users/Smul/Docs/info_libuse_01.cshtml')"><i
+                    class="fa-solid fa-book"></i> 도서관 운영시간
+            </button>&nbsp;
+            <button class="w-btn-outline w-btn-green-outline find-btn1" type="button"
+                    onclick="window.open('https://www.smu.ac.kr/ko/intro/map_all.do?campusCd=CMN001.0002&srSearchValue=')">
+                <i class="fa-solid fa-map-location-dot"></i> 상명대학교 지도
+            </button>&nbsp;
+            <button class="w-btn-outline w-btn-green-outline find-btn1" type="button"
+                    onclick="window.open('http://admission.smu.ac.kr/ebook/2020_hak/index.html')"><i
+                    class="fa-solid fa-circle-info"></i> 학부 전공 안내
+            </button>
+    </div>
+</form>
+</body>
+</html>
